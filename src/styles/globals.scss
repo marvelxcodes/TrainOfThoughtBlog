@@ -11,7 +11,7 @@
 
 ::selection {
 	background-color: var(--color-accent);
-	color: var(--color-black);
+	color: var(--color-white);
 }
 
 body {
@@ -19,8 +19,13 @@ body {
 	overflow-x: hidden;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 input,
-button {
+button,
+textarea {
 	border: none;
 	outline: none;
 }
