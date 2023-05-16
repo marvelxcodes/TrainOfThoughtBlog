@@ -1,0 +1,51 @@
+.container {
+	padding: 0 1rem;
+}
+
+.section1 {
+	width: 100%;
+}
+
+.featuredPostContainer {
+	max-width: 60rem;
+	position: relative;
+
+	@media (min-width: 768px) {
+		margin: 6rem auto 4rem auto;
+	}
+	@media (max-width: 768px) {
+		margin: 3rem auto;
+	}
+
+	outline: 1px solid #000;
+
+	.thumbnail {
+		width: 100%;
+	}
+
+	@media (min-width: 768px) {
+		.headText {
+			position: absolute;
+			top: -2rem;
+			width: fit-content;
+			padding: 0.6rem 3rem;
+
+			outline: 1px solid #000;
+			background-color: #fff;
+
+			font-weight: 300;
+			font-size: 1.6rem;
+			letter-spacing: 0.3rem;
+		}
+	}
+	@media (max-width: 768px) {
+		.headText {
+			display: flex;
+			justify-content: center;
+			padding: 1rem 0;
+
+			font-size: 1.2rem;
+			letter-spacing: 0.3rem;
+		}
+	}
+}
