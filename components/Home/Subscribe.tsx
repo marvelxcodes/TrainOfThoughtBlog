@@ -1,6 +1,6 @@
 import { Playfair_Display } from 'next/font/google';
-import Input from './Input';
-import Button from './Button';
+import Input from '../Input';
+import Button from '../Button';
 
 const playfair_display = Playfair_Display({
 	subsets: ['latin'],

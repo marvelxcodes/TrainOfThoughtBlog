@@ -3,7 +3,7 @@ import { Inter, Playfair_Display, Heebo } from 'next/font/google';
 import LocalFont from 'next/font/local';
 import styles from '@/styles/Home.module.scss';
 import Time from '@/components/Time';
-import Subscribe from '@/components/Subscribe';
+import Subscribe from '@/components/Home/Subscribe';
 import Button from '@/components/Button';
 import Link from 'next/link';
 import H3 from '@/components/H3';
@@ -13,6 +13,8 @@ import {
 	LinkedInIcon,
 	TwitterIcon,
 } from '@/components/Icons';
+import Status from '@/components/Home/Status';
+import Input from '@/components/Input';
 
 const playfair_display = Playfair_Display({
 	subsets: ['latin'],
@@ -49,8 +51,8 @@ export default function Home() {
 					<Image
 						className={styles.thumbnail}
 						alt='book in hand'
-						width={720}
-						height={1280}
+						width={1280}
+						height={720}
 						src={testData.thumbnail}
 					/>
 					<div className='p-5 space-y-3'>
@@ -78,10 +80,16 @@ export default function Home() {
 					</div>
 				</section>
 				<section className='flex-1'>
-					<div className='mx-auto max-w-md flex flex-col gap-6'>
+					<div className='mx-auto px-5 max-w-md flex flex-col max-md:items-center gap-12 py-12'>
 						<H3>ABOUT ME</H3>
-						<Image />
-						<p className='leading-7 tracking-wide'>
+						<Image
+							src='/assets/Myself.jpg'
+							height={500}
+							width={800}
+							alt='rama krishnan'
+							className='mx-auto outline outline-1 w-full aspect-[3/2] object-cover'
+						/>
+						<p className='leading-7 tracking-wide max-md:text-center'>
 							Hey There! I&apos;m Rama Krishnan V, a Fasinated Teenage
 							Full Stack Web Developer and a Tech Enthusiast from South
 							India. In my pastime, I write some articles about
@@ -92,36 +100,62 @@ export default function Home() {
 							className='hover:text-[var(--color-accent)]'
 							href='/about'
 						>{`Read More >`}</Link>
-
-						<hr className='' />
+						<hr className='border-black' />
 						<H3>FOLLOW ME</H3>
-
-						<div className='border-y border-black py-5 justify-center flex gap-x-6'>
+						<div className='border-y border-black py-5 w-full justify-center flex gap-x-10'>
 							<Link href='https://linkedin.com/in/marvelxcodes'>
-								<LinkedInIcon className='h-6 w-6' />
+								<LinkedInIcon className='h-6 w-6 hover:text-blue-700' />
 							</Link>
 							<Link href='https://facebook.com/marvelxcodes'>
-								<FacebookIcon className='h-6 w-6' />
+								<FacebookIcon className='h-6 w-6 hover:text-blue-800' />
 							</Link>
 							<Link href='https://instagram.com/marvelxcodes'>
-								<InstagramIcon className='h-6 w-6' />
+								<InstagramIcon className='h-6 w-6 hover:text-pink-600' />
 							</Link>
 							<Link href='https://twitter.com/marvelxcodes'>
-								<TwitterIcon className='h-6 w-6' />
+								<TwitterIcon className='h-6 w-6 hover:text-blue-400' />
 							</Link>
 						</div>
 						<H3>SUBSCRIBE</H3>
-						<form>
-							<label>
-								Enter your email *
-								<input type='text' />
-							</label>
+						<div className='flex gap-x-3'>
+							<section className='flex flex-col gap-y-3 flex-1'>
+								<Status>1</Status>
+								<Status>3</Status>
+								<Status>5</Status>
+							</section>
+							<section className='flex flex-col gap-y-3 flex-1'>
+								<Status>2</Status>
+								<Status>4</Status>
+								<Status>6</Status>
+							</section>
+						</div>
+						<form className='flex flex-col items-center w-full'>
+							<div className='flex flex-col items-start mb-10 w-full'>
+								<label className='flex flex-col text-lg w-full'>
+									Enter you email *
+									<Input className='w-full' />
+								</label>
+							</div>
 							<Button type='submit'>Subscribe</Button>
-							<hr className='' />
-							<H3>MY PICK OF THE MONTH</H3>
-							<Image className='outline' />
-							<p></p>
 						</form>
+						<hr className='border-black' />
+						<H3>MY PICK OF THE MONTH</H3>
+						<Image
+							src='/assets/PickOfTheMonth.jpg'
+							height={600}
+							width={350}
+							alt='javascript for impatient programmers book'
+							className='outline outline-black outline-1 h-80 w-64 mx-auto'
+						/>
+						<p className='leading-7 tracking-wide max-md:text-center'>
+							This book makes JavaScript less challenging to learn for
+							newcomers, by offering a modern view that is as consistent
+							as possible.Highlights: Get started quickly, by initially
+							focusing on modern features. Covers all essential features
+							of JavaScript, up to and including ES2019. Optional
+							advanced sections let you dig deeper.No prior knowledge of
+							JavaScript is required, but you should know how to program.
+						</p>
 					</div>
 				</section>
 			</div>
