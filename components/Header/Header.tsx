@@ -11,6 +11,7 @@ import {
 	TwitterIcon,
 } from '@/components/Icons';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const playfair_display = Playfair_Display({
 	subsets: ['latin'],
@@ -37,10 +38,18 @@ export const Header = () => {
 				<NavItem href='/blog'>My Blog</NavItem>
 				<NavItem href='#contact'>Contact</NavItem>
 				<div className={styles.SocialMediaIcons}>
-					<FacebookIcon />
-					<TwitterIcon />
-					<InstagramIcon />
-					<LinkedInIcon />
+					<Link href='https://facebook.com/marvelxcodes'>
+						<FacebookIcon className='hover:text-blue-800' />
+					</Link>
+					<Link href='https://twitter.com/marvelxcodes'>
+						<TwitterIcon className='hover:text-blue-400' />
+					</Link>
+					<Link href='https://instagram.com/marvelxcodes'>
+						<InstagramIcon className='hover:text-pink-600' />
+					</Link>
+					<Link href='https://linkedin.com/in/marvelxcodes'>
+						<LinkedInIcon className='hover:text-blue-700' />
+					</Link>
 				</div>
 			</nav>
 			<BarsIcon
