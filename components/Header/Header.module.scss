@@ -89,13 +89,10 @@
 		.SocialMediaIcons {
 			display: flex;
 			flex: 1;
+			gap: 1rem;
 			justify-content: center;
 			align-items: center;
 			border-right: 1px solid #000;
-
-			& > svg {
-				margin: 0.5rem;
-			}
 		}
 	}
 }
