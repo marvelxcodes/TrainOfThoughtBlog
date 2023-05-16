@@ -60,7 +60,9 @@ export const FacebookIcon = ({ ...props }: SVGProps<SVGSVGElement>) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 310 310'
-		className='h-5 w-5'
+		height={16}
+		width={16}
+		fill='currentColor'
 		{...props}
 	>
 		<path
