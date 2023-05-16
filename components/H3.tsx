@@ -16,7 +16,7 @@ const H3 = ({
 	return (
 		<h3
 			style={avenir.style}
-			className={`tracking-[0.5rem] font-light text-2xl ${className}`}
+			className={`tracking-[0.5rem] font-light text-2xl max-md:text-center ${className}`}
 			{...attributes}
 		>
 			{children}
