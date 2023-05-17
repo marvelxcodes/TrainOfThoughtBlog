@@ -15,6 +15,7 @@ import {
 } from '@/components/Icons';
 import Status from '@/components/Home/Status';
 import Input from '@/components/Input';
+import Blog from '@/components/Home/Blog';
 
 const playfair_display = Playfair_Display({
 	subsets: ['latin'],
@@ -34,9 +35,6 @@ export default function Home() {
 		readingTime: 2,
 		thumbnail: '/assets/featured_post.jpg',
 		views: 100,
-		comments: {
-			length: 1,
-		},
 		heart: 5,
 		content: 'Hello World',
 	};
@@ -71,9 +69,59 @@ export default function Home() {
 			</div>
 			<Subscribe />
 			<div className='flex max-md:flex-col my-5'>
-				<section className='border-r border-black flex-1'>
-					<div className='mx-auto max-w-xl'>
+				<section className='max-md:border-b md:border-r border-black flex-1'>
+					<div className='mx-auto max-w-xl flex flex-col gap-y-10 py-10 items-center'>
 						<H3>TRAIN OF THOUGHT</H3>
+						<div className='space-y-10'>
+							<Blog
+								id='1'
+								postedOn={new Date()}
+								readingTime={3}
+								subtitle='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores atque ex explicabo similique dolore ab voluptatibus nobis nulla cumque.'
+								thumbnail='/posts/pexels-jay-pizzle-3752194.jpg'
+								title='Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+							/>
+							<Blog
+								id='1'
+								postedOn={new Date()}
+								readingTime={3}
+								subtitle='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores atque ex explicabo similique dolore ab voluptatibus nobis nulla cumque.'
+								thumbnail='/posts/pexels-jay-pizzle-3752194.jpg'
+								title='Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+							/>
+							<Blog
+								id='1'
+								postedOn={new Date()}
+								readingTime={3}
+								subtitle='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores atque ex explicabo similique dolore ab voluptatibus nobis nulla cumque.'
+								thumbnail='/posts/pexels-jay-pizzle-3752194.jpg'
+								title='Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+							/>
+							<Blog
+								id='1'
+								postedOn={new Date()}
+								readingTime={3}
+								subtitle='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores atque ex explicabo similique dolore ab voluptatibus nobis nulla cumque.'
+								thumbnail='/posts/pexels-jay-pizzle-3752194.jpg'
+								title='Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+							/>
+							<Blog
+								id='1'
+								postedOn={new Date()}
+								readingTime={3}
+								subtitle='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores atque ex explicabo similique dolore ab voluptatibus nobis nulla cumque.'
+								thumbnail='/posts/pexels-jay-pizzle-3752194.jpg'
+								title='Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+							/>
+							<Blog
+								id='1'
+								postedOn={new Date()}
+								readingTime={3}
+								subtitle='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolores atque ex explicabo similique dolore ab voluptatibus nobis nulla cumque.'
+								thumbnail='/posts/pexels-jay-pizzle-3752194.jpg'
+								title='Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+							/>
+						</div>
 						<Link href='/blog'>
 							<Button>More Posts</Button>
 						</Link>
@@ -133,7 +181,7 @@ export default function Home() {
 							<div className='flex flex-col items-start mb-10 w-full'>
 								<label className='flex flex-col text-lg w-full'>
 									Enter you email *
-									<Input className='w-full' />
+									<Input className='w-full border-x border-y focus:border-x-0 focus:border-t-0' />
 								</label>
 							</div>
 							<Button type='submit'>Subscribe</Button>
